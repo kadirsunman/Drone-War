@@ -34,11 +34,6 @@ public class SpawnSword : MonoBehaviour
             timeResult = false;
             StartCoroutine(example());
         }
-        else if (swordRange == maxSword && timeResult == true)
-        {
-            timeResult = false;
-            enemy = Instantiate(boss, new Vector3(-7.65f, -0.05f, 0f), Quaternion.identity);
-        }
         else
         {
 
@@ -53,7 +48,15 @@ public class SpawnSword : MonoBehaviour
     IEnumerator example()
     {
         yield return new WaitForSeconds(2f);
-        enemy =Instantiate(swordMan, new Vector3(11f, -2f, 0), Quaternion.identity);
+        
+        if(swordRange == maxSword -1)
+        {
+            enemy = Instantiate(boss, new Vector3(10f, -2f, 0), Quaternion.identity);
+        }
+        else
+        {
+            enemy = Instantiate(swordMan, new Vector3(11f, -2f, 0), Quaternion.identity);
+        }
         timeResult = true;
         swordRange++;
     }

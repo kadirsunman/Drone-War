@@ -2019,7 +2019,7 @@ MonoBehaviour:
   missiles: {fileID: 6540492868669297906, guid: bba8bcc1905186d479f3cf6065d4a58f,
     type: 3}
   speed: -2
-  maxSword: 10
+  maxSword: 5
 --- !u!4 &1611296914
 Transform:
   m_ObjectHideFlags: 0
